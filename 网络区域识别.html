@@ -172,7 +172,7 @@
     <div class="scope-row">
       <label class="scope-label" for="scopeSel">区域</label>
       <select class="sel" id="scopeSel">
-        <option value="default" selected>默认</option>
+        <option value="default" selected>全局</option>
         <option value="zone">区域</option>
       </select>
     </div>
@@ -319,7 +319,7 @@ function toast(msg,kind){
   setTimeout(function(){ t.style.opacity="0"; t.style.transition="opacity .3s"; setTimeout(function(){ t.remove(); },320); },3000);
 }
 function optionHTML(chosen){
-  var h='<option value="">禁用</option>';
+  var h='<option value="">默认</option>';
   scripts.forEach(function(s){
     h+='<option value="'+esc(s)+'"'+(chosen===s?" selected":"")+'>'+esc(s)+'</option>';
   });
